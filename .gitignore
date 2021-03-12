@@ -3,6 +3,7 @@
 *.aar
 *.ap_
 *.aab
+signal-dev-key.keystore
 
 # Files for the ART/Dalvik VM
 *.dex
