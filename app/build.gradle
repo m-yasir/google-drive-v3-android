@@ -20,7 +20,8 @@ android {
 
     defaultConfig {
         applicationId "org.thoughtcrime.securesms"
-        minSdkVersion 28
+        minSdkVersion 19
+        multiDexEnabled true
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
@@ -52,14 +53,41 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
     // g drive libs
+//    implementation 'com.google.android.gms:play-services-auth:17.0.0'
     implementation 'com.google.android.gms:play-services-auth:19.0.0'
-    implementation 'com.google.http-client:google-http-client-gson:1.38.1'
-    implementation 'com.google.apis:google-api-services-people:v1-rev20210302-1.31.0'
-//    implementation 'com.google.api-client:google-api-client:1.31.2'
-    implementation('com.google.api-client:google-api-client-android:1.26.0') {
+//    implementation 'com.google.apis:google-api-services-people:v1-rev20210302-1.31.0'
+//    implementation 'com.google.http-client:google-http-client-gson:1.26.0'
+//    implementation('com.google.api-client:google-api-client-android:1.26.0') {
+//        exclude group: 'org.apache.httpcomponents'
+//    }
+//    implementation('com.google.apis:google-api-services-drive:v3-rev136-1.25.0') {
+//        exclude group: 'org.apache.httpcomponents'
+//    }
+    // Google Drive libs
+//    implementation ('com.google.api-client:google-api-client:1.31.1') {
+////        exclude group: 'org.apache.httpcomponents'
+////        exclude group: 'com.google.guava', module: 'guava'
+////        exclude group: 'com.google.guava', module: 'listenablefuture'
+//    }
+    implementation ('com.google.http-client:google-http-client-gson:1.38.1') {
         exclude group: 'org.apache.httpcomponents'
     }
-    implementation('com.google.apis:google-api-services-drive:v3-rev136-1.25.0') {
+    implementation ('com.google.http-client:google-http-client:1.39.0') {
         exclude group: 'org.apache.httpcomponents'
+        exclude group: 'com.google.guava', module: 'guava'
+        exclude group: 'com.google.guava', module: 'listenablefuture'
+    }
+    implementation ('com.google.apis:google-api-services-people:v1-rev20210302-1.31.0') {
+        exclude group: 'org.apache.httpcomponents'
+    }
+    implementation ('com.google.api-client:google-api-client-android:1.26.0') {
+        exclude group: 'org.apache.httpcomponents'
+        exclude group: 'com.google.guava', module: 'guava'
+        exclude group: 'com.google.guava', module: 'listenablefuture'
+    }
+    implementation ('com.google.apis:google-api-services-drive:v3-rev20210315-1.31.0') {
+        exclude group: 'org.apache.httpcomponents'
+        exclude group: 'com.google.guava', module: 'guava'
+        exclude group: 'com.google.guava', module: 'listenablefuture'
     }
 }

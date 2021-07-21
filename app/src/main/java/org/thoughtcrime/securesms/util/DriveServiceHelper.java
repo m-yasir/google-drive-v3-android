@@ -104,11 +104,10 @@ public class DriveServiceHelper {
      * Developer's Console</a> and be submitted to Google for verification.</p>
      */
     public Task<FileList> queryFiles() {
-        return Tasks.call(mExecutor, new Callable<FileList>() {
-            @Override
-            public FileList call() throws Exception {
-                return driveService.files().list().setSpaces("drive").execute();
-            }
+        return Tasks.call(mExecutor, () -> {
+            Drive.Files.List list = driveService.files().list().setFields("files(id,name,size)").setSpaces("drive");
+
+            return list.execute();
         });
     }
 

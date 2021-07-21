@@ -7,4 +7,19 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <!-- Custom Colors -->
+
+    <color name="primary_btn_tint">@color/core_ultramarine</color>
+
+    <!-- Ultramarine Colors -->
+
+    <color name="core_ultramarine">#2c6bed</color>
+    <color name="core_ultramarine_light">#6191f3</color>
+    <color name="core_ultramarine_dark">#1851b4</color>
+    <color name="core_ultramarine_icon">#3a76f0</color>
+    <color name="core_ultramarine_33">#552c6bed</color>
+    <color name="core_ultramarine_50">#802c6bed</color>
+
+
 </resources>

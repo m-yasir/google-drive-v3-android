@@ -11,11 +11,15 @@
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
 
     <!--  GOOGLE DRIVE EXAMPLE STRINGS -->
-    <string name="google_drive_example_welcome">Welcome to Google Drive Example</string>
+    <string name="google_drive_example_welcome_title">Welcome to Google Drive Example</string>
+    <string name="google_drive_example_text_subheader">Please Sign in to continue</string>
+
+    <string name="sign_in">Sign in</string>
 
     <string name="create_file">Create File</string>
     <string name="update_file">Update File/Backup</string>
     <string name="read_file">Read File</string>
-<!--    <string name="create_file">Create File</string>-->
+    <string name="google_drive_fragment">Google Drive Fragment</string>
+    <!--    <string name="create_file">Create File</string>-->
 <!--    <string name="create_file">Create File</string>-->
 </resources>
